@@ -45,3 +45,7 @@ group :development do
   gem 'spring'
 end
 
+gem 'trailblazer-cells'
+gem 'cells-erb'
+gem 'cells-rails'
+
