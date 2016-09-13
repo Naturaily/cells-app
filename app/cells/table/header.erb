@@ -1,0 +1,8 @@
+<thead>
+    <tr>
+      <% attributes.each do |header| %>
+        <%= content_tag :th, header.upcase %>
+      <% end %>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
