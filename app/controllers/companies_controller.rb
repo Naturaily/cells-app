@@ -4,7 +4,8 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    render html: cell(IndexCell, items: Company.all, model_name: 'company',
+      attributes: [:name, :city], notice: notice)
   end
 
   # GET /companies/1
