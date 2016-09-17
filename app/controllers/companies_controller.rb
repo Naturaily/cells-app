@@ -11,6 +11,8 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    render html: cell(ShowCell, item: @company, model_name: 'company',
+      attributes: [:name, :city], notice: notice)
   end
 
   # GET /companies/new

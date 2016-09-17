@@ -1,0 +1,11 @@
+<%=cell NoticeCell, notice: notice %>
+
+<% attributes.each do |attribute| %>
+  <p>
+    <strong><%= attribute.upcase%>:</strong>
+    <%= item.send(attribute) %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_path %> |
+<%= link_to 'Back', back_path %>
