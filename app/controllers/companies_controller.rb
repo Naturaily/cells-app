@@ -23,6 +23,8 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    render html: cell(EditCell, item: @company, model_name: 'company',
+      attributes: [:name, :city], notice: notice)
   end
 
   # POST /companies
