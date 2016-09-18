@@ -11,15 +11,11 @@ class NewCell < Cell::ViewModel
     model[:model_name]
   end
 
-  def scope
-    model[:scope] || []
-  end
-
   def notice
     model[:notice]
   end
 
   def back_path
-    polymorphic_path(scope.dup << model_name.pluralize)
+    polymorphic_path(model_name.pluralize)
   end
 end

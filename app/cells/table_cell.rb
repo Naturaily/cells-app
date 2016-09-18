@@ -11,10 +11,6 @@ class TableCell < Cell::ViewModel
     model[:model_name]
   end
 
-  def scope
-    model[:scope] || []
-  end
-
   def header
     render
   end
@@ -35,10 +31,10 @@ class TableCell < Cell::ViewModel
   end
 
   def show_path(item)
-    polymorphic_path(scope.dup << item)
+    polymorphic_path(item)
   end
 
   def edit_path(item)
-    edit_polymorphic_path(scope.dup << item)
+    edit_polymorphic_path(item)
   end
 end

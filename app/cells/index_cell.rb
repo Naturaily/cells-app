@@ -11,15 +11,11 @@ class IndexCell < Cell::ViewModel
     model[:model_name]
   end
 
-  def scope
-    model[:scope] || []
-  end
-
   def notice
     model[:notice]
   end
 
   def new_path
-    new_polymorphic_path(scope.push(model_name))
+    new_polymorphic_path(model_name)
   end
 end
