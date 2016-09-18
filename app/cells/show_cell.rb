@@ -1,4 +1,4 @@
-class ShowCell < Cell::ViewModel
+class ShowCell < PageCell
   def item
     model[:item]
   end

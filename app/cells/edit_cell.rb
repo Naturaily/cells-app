@@ -1,4 +1,4 @@
-class EditCell < Cell::ViewModel
+class EditCell < PageCell
   def item
     model[:item]
   end

@@ -1,4 +1,4 @@
-class IndexCell < Cell::ViewModel
+class IndexCell < PageCell
   def items
     model[:items]
   end
