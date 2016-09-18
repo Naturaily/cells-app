@@ -2,7 +2,7 @@
 
 <% attributes.each do |attribute| %>
   <p>
-    <strong><%= attribute.upcase%>:</strong>
+    <strong><%= attribute.capitalize%>:</strong>
     <%= item.send(attribute) %>
   </p>
 <% end %>

@@ -1,8 +1,8 @@
 <%=cell NoticeCell, notice: notice %>
 
-<%=cell TitleCell, title: "Listing #{model_name.pluralize.upcase}" %>
+<%=cell TitleCell, title: "Listing #{model_name.pluralize.capitalize}" %>
 <%=cell TableCell, items: items, attributes: attributes, scope: scope %>
 
 <br>
 
-<%= link_to "New #{model_name.upcase}", new_path %>
+<%= link_to "New #{model_name.capitalize}", new_path %>
