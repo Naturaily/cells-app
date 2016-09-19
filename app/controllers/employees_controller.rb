@@ -4,21 +4,27 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    render html: cell(IndexCell, items: Employee.all, model_name: 'employee',
+      attributes: [:first_name, :last_name, :department], notice: notice)
   end
 
   # GET /employees/1
   # GET /employees/1.json
   def show
+    render html: cell(ShowCell, item: @employee, model_name: 'employee',
+      attributes: [:first_name, :last_name, :department], notice: notice)
   end
 
   # GET /employees/new
   def new
-    @employee = Employee.new
+    render html: cell(NewCell, item: Employee.new, model_name: 'employee',
+      attributes: [:first_name, :last_name, :department_id])
   end
 
   # GET /employees/1/edit
   def edit
+    render html: cell(EditCell, item: @employee, model_name: 'employee',
+      attributes: [:first_name, :last_name, :department_id], notice: notice)
   end
 
   # POST /employees
