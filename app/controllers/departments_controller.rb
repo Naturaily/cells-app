@@ -4,21 +4,27 @@ class DepartmentsController < ApplicationController
   # GET /departments
   # GET /departments.json
   def index
-    @departments = Department.all
+    render html: cell(IndexCell, items: Department.all, model_name: 'department',
+      attributes: [:name, :company], notice: notice)
   end
 
   # GET /departments/1
   # GET /departments/1.json
   def show
+    render html: cell(ShowCell, item: @department, model_name: 'department',
+      attributes: [:name, :company], notice: notice)
   end
 
   # GET /departments/new
   def new
-    @department = Department.new
+    render html: cell(NewCell, item: Department.new, model_name: 'department',
+      attributes: [:name, :company_id])
   end
 
   # GET /departments/1/edit
   def edit
+    render html: cell(EditCell, item: @department, model_name: 'department',
+      attributes: [:name, :company_id], notice: notice)
   end
 
   # POST /departments
